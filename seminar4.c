@@ -115,13 +115,39 @@ void* citireListaMasiniDinFisier(const char* numeFisier) {
 
 }
 
-void dezalocareListaMasini(/*lista de masini*/) {
-	//sunt dezalocate toate masinile si lista de elemente
+void dezalocareListaMasini(N** lista) {
+	
+	while ((*lista)) {
+		N* p = *lista;
+		(*lista) = (*lista)->next;
+
+		free(p->info.model);
+		free(p->info.numeSofer);
+		free(p);
+
+		
+
+	}
 }
 
-float calculeazaPretMediu(/*lista de masini*/) {
-	//calculeaza pretul mediu al masinilor din lista.
-	return 0;
+float calculeazaPretMediu(N* Lista) {
+	float suma = 0;
+	int contor = 0;
+	while (Lista) {
+		suma +=  Lista->info.pret;
+		contor++;
+		Lista = Lista->next;
+
+
+
+
+	}
+	if (contor == 0) {
+		return 0;
+	}
+	return suma / contor;
+
+	
 }
 
 void stergeMasiniDinSeria(/*lista masini*/ char serieCautata) {
@@ -129,15 +155,62 @@ void stergeMasiniDinSeria(/*lista masini*/ char serieCautata) {
 	//tratati situatia ca masina se afla si pe prima pozitie, si pe ultima pozitie
 }
 
-float calculeazaPretulMasinilorUnuiSofer(/*lista masini*/ const char* numeSofer) {
-	//calculeaza pretul tuturor masinilor unui sofer.
+float calculeazaPretulMasinilorUnuiSofer(N* lista, const char* numeSofer) {
+	float suma = 0;
+	while (lista) {
+		if (Strcmp(lista->info.numeSofer, numeSofer)==0) {
+			suma += lista->info.pret;
+
+
+		}
+		lista = lista->next;
+
+	}
+	return suma;
+}
+int getNrUsiMasinaScumpa(N* lista) {
+	
+	if (lista) {
+		float pretMaxim =lista->info.pret;
+		int nrUsi = lista->info.nrUsi;
+		lista = lista->next;
+		while (lista) {
+			if (lista->info.pret > pretMaxim) {
+				nrUsi = lista->info.nrUsi;
+				pretMaxim = lista->info.pret;
+
+			}lista = lista->next;
+
+		}
+		return nrUsi;
+
+
+	}
 	return 0;
+
+
 }
 
 int main() {
 	N* nod;
 	nod = citireListaMasiniDinFisier("masini.txt");
 	afisareListaMasini(nod);
+	dezalocareListaMasini(&nod);
+	printf("\n");
+
+	float medie = calculeazaPretMediu(nod);
+	printf("Media este: %.2f", medie);
+	float sumaSofer = calculeazaPretulMasinilorUnuiSofer(nod, "Ionescu");
+	printf("\n Suma masinilor lui Ionescu este : %.2f", sumaSofer);
+	int nrUsi = getNrUsiMasinaScumpa(nod);
+	printf("Numarul de usi ale celei mai scumpe masini este: %d\n", nrUsi);
+
+
+
+
+	dezalocareListaMasini(&nod);
+
+
 
 
 	return 0;
