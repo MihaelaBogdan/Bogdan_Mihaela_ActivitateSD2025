@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  exersare3.c
   sem2_exersare.c
   seminar1.c
@@ -14,3 +15,6 @@ C:\Users\mihab\OneDrive\Desktop\Bogdan_Mihaela_ActivitateSD2025\Bogdan_Mihaela_A
 C:\Users\mihab\OneDrive\Desktop\Bogdan_Mihaela_ActivitateSD2025\Bogdan_Mihaela_ActivitateSD2025\seminar4.c(36,12): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\mihab\OneDrive\Desktop\Bogdan_Mihaela_ActivitateSD2025\Bogdan_Mihaela_ActivitateSD2025\seminar4.c(103,10): warning C4101: 'm': unreferenced local variable
   Generating Code...
+=======
+﻿  Bogdan_Mihaela_ActivitateSD2025.vcxproj -> C:\Users\mihab\OneDrive\Desktop\Bogdan_Mihaela_ActivitateSD2025\x64\Debug\Bogdan_Mihaela_ActivitateSD2025.exe
+>>>>>>> ac174c6 (semin4)

@@ -127,12 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="exersare3.c" />
     <ClCompile Include="sem2_exersare.c" />
     <ClCompile Include="seminar1.c" />
     <ClCompile Include="seminar2.c" />
     <ClCompile Include="seminar3.c" />
     <ClCompile Include="seminar4.c" />
+=======
+    <ClCompile Include="sem2_exersare.c" />
+    <ClCompile Include="seminar1.c" />
+    <ClCompile Include="seminar2.c" />
+>>>>>>> ac174c6 (semin4)
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
