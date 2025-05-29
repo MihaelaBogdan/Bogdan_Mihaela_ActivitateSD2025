@@ -1,0 +1,6 @@
+1,300,9.5,Fic?iune,Mircea C?rt?rescu,A
+2,180,8.1,Poli?ist,Stieg Larsson,B
+3,450,9.8,Fantasy,J.K. Rowling,C
+4,220,7.4,Romantic,Nicholas Sparks,D
+5,350,8.9,Istoric,Ken Follett,E
+6,280,7.0,Satir?,George Orwell,F

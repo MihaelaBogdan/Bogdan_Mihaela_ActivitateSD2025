@@ -1,0 +1,6 @@
+1,120,9.1,Drama,Radu Afrim,A
+2,100,8.5,Comedie,Andreea Vulpe,B
+3,150,9.8,Tragedie,Mihai M?niu?iu,C
+4,110,7.2,Satir?,Cristian Juncu,D
+5,95,8.9,Monolog,Lia Bugnar,E
+6,130,6.7,Musical,Horia Suru,F
